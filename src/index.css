@@ -88,6 +88,10 @@ display: inline-block;
   gap: 1rem; 
 }
 
-.btn {
-  
+.pink-age {
+  color: pink;
+}
+
+.blue-age {
+  color: lightblue;
 }

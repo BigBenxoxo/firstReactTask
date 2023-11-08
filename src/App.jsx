@@ -3,6 +3,14 @@ import Card from "./Card";
 import Header from "./Header";
 import Footer from "./Footer";
 import Logo from "./assets/react.svg";
+
+function Greeting({ name }) {
+  if (name === "Ben") {
+    return <p> Welcome {name}</p>;
+  }
+  return <p>Please log in</p>;
+}
+
 function App() {
   const [persons, setPersons] = useState([
     { id: 1, name: "Bendik", title: "CEO", age: 31 },
@@ -19,6 +27,7 @@ function App() {
     <div>
       <Header logo="Bendik Pettersen" />
       <main>
+        <Greeting name="Someone"></Greeting>
         <img src={Logo} />
         <h2>This is my application</h2>
         <div className="cards">
