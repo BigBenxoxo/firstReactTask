@@ -95,3 +95,9 @@ display: inline-block;
 .blue-age {
   color: lightblue;
 }
+
+input {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5rem;
+}
