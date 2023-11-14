@@ -1,6 +1,6 @@
 const Card = ({ name, title, age, number, click }) => {
   return (
-    <div
+    <div //Styling in react(?)
       style={age > 35 ? { color: "red" } : { backgroundColor: "blue" }}
       className="card"
     >
