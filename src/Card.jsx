@@ -1,4 +1,5 @@
 const Card = ({ name, title, age, number, click }) => {
+  //Destructuring
   return (
     <div //Styling in react(?)
       style={age > 35 ? { color: "red" } : { backgroundColor: "blue" }}

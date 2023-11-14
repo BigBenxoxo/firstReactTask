@@ -2,7 +2,7 @@ import { useState } from "react";
 import Card from "./Card";
 import Header from "./Header";
 import Footer from "./Footer";
-import Logo from "./assets/react.svg"; //Images in react
+import Logo from "./assets/react.svg"; //Images in react, image has to be in src and assets.
 
 function Greeting({ name }) {
   if (name === "Ben") {
@@ -12,7 +12,6 @@ function Greeting({ name }) {
 }
 
 function App() {
-  //Destructuring(?)
   const [persons, setPersons] = useState([
     //Handling event + modify state
     { id: 1, name: "Bendik", title: "CEO", age: 31 },
@@ -34,17 +33,13 @@ function App() {
         <img src={Logo} />
         <h2>This is my application</h2>
         <div className="cards">
-          {persons.map(
-            (
-              person //Sending to child (Card) and passing parameter to event handler.
-            ) => (
-              <Card
-                key={person.id}
-                {...person}
-                click={() => removeHandler(person.id)} //Handling event
-              />
-            )
-          )}
+          {persons.map((person) => (
+            <Card
+              key={person.id}
+              {...person}
+              click={() => removeHandler(person.id)} //Event function, that we pass to the child in Card.jsx (onClick)
+            />
+          ))}
         </div>
         <button className="btn">Click me</button>
       </main>
